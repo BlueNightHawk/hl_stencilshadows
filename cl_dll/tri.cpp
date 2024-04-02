@@ -22,6 +22,11 @@
 #include "tri.h"
 extern IParticleMan* g_pParticleMan;
 
+// STENCIL SHADOWS BEGIN
+#include "svd_render.h"
+#include "lightlist.h"
+// STENCIL SHADOWS END
+
 /*
 =================
 HUD_DrawNormalTriangles
@@ -32,6 +37,9 @@ Non-transparent triangles-- add them here
 void DLLEXPORT HUD_DrawNormalTriangles()
 {
 	//	RecClDrawNormalTriangles();
+	// STENCIL SHADOWS BEGIN
+	gLightList.DrawNormal();
+	// STENCIL SHADOWS END
 
 	gHUD.m_Spectator.DrawOverview();
 }
@@ -47,7 +55,9 @@ Render any triangles with transparent rendermode needs here
 void DLLEXPORT HUD_DrawTransparentTriangles()
 {
 	//	RecClDrawTransparentTriangles();
-
+	// STENCIL SHADOWS BEGIN
+	SVD_DrawTransparentTriangles();
+	// STENCIL SHADOWS END
 
 	if (g_pParticleMan)
 		g_pParticleMan->Update();

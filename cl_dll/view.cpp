@@ -20,6 +20,11 @@
 #include "hltv.h"
 #include "Exports.h"
 
+// STENCIL SHADOWS BEGIN
+#include "svd_render.h"
+#include "lightlist.h"
+// STENCIL SHADOWS END
+
 int CL_IsThirdPerson();
 void CL_CameraOffset(float* ofs);
 
@@ -1638,6 +1643,11 @@ void DLLEXPORT V_CalcRefdef(struct ref_params_s* pparams)
 	{
 		V_CalcNormalRefdef(pparams);
 	}
+
+	// STENCIL SHADOWS BEGIN
+	gLightList.CalcRefDef();
+	SVD_CalcRefDef(pparams);
+	// STENCIL SHADOWS END
 
 	/*
 // Example of how to overlay the whole screen with red at 50 % alpha

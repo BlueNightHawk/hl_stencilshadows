@@ -21,14 +21,14 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>NotSet</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -71,7 +71,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>..\..\utils\vgui\lib\win32_vc6\vgui.lib;wsock32.lib;..\..\lib\public\sdl2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\..\utils\vgui\lib\win32_vc6\vgui.lib;wsock32.lib;..\..\lib\public\sdl2.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <BaseAddress>
       </BaseAddress>
     </Link>
@@ -146,6 +146,7 @@ cmd /c ""$(ProjectDir)..\..\filecopy.bat" "$(SolutionDir)../../network" "" "delt
     <ClCompile Include="..\..\cl_dll\inputw32.cpp" />
     <ClCompile Include="..\..\cl_dll\interpolation.cpp" />
     <ClCompile Include="..\..\cl_dll\in_camera.cpp" />
+    <ClCompile Include="..\..\cl_dll\lightlist.cpp" />
     <ClCompile Include="..\..\cl_dll\menu.cpp" />
     <ClCompile Include="..\..\cl_dll\message.cpp" />
     <ClCompile Include="..\..\cl_dll\particleman\CBaseParticle.cpp" />
@@ -156,7 +157,10 @@ cmd /c ""$(ProjectDir)..\..\filecopy.bat" "$(SolutionDir)../../network" "" "delt
     <ClCompile Include="..\..\cl_dll\statusbar.cpp" />
     <ClCompile Include="..\..\cl_dll\status_icons.cpp" />
     <ClCompile Include="..\..\cl_dll\StudioModelRenderer.cpp" />
+    <ClCompile Include="..\..\cl_dll\studio_stencil.cpp" />
     <ClCompile Include="..\..\cl_dll\studio_util.cpp" />
+    <ClCompile Include="..\..\cl_dll\svdformat.cpp" />
+    <ClCompile Include="..\..\cl_dll\svd_render.cpp" />
     <ClCompile Include="..\..\cl_dll\text_message.cpp" />
     <ClCompile Include="..\..\cl_dll\train.cpp" />
     <ClCompile Include="..\..\cl_dll\tri.cpp" />
