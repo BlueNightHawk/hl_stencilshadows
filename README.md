@@ -1,3 +1,7 @@
+Stencil shadows from [Overfloater's TWHL tutorial](https://twhl.info/wiki/page/Tutorial%3A_Adding_hack-free_Stencil_Shadows_to_Half-Life), with some personal QOL changes.
+
+You can toggle the shadows using "r_shadows_stencil" cvar. Setting the value to 2 disables lightspot based shadow direction.
+
 # About
 
 [Half-Life Updated](https://github.com/twhl-community/halflife-updated), [Opposing Force Updated](https://github.com/twhl-community/halflife-op4-updated) and [Blue Shift Updated](https://github.com/twhl-community/halflife-bs-updated) are repositories that provide updated versions of the Half-Life SDK, targeted to the 3 Half-Life 1 PC games officially available.
